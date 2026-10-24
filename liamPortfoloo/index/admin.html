@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Liam Mckeever</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <div class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <div class="brand-mark">LM</div>
+          <div>
+            <h3>Liam Mckeever</h3>
+            <p>Admin Portal</p>
+          </div>
+        </div>
+
+        <nav class="admin-nav" aria-label="Admin navigation">
+          <a class="active" href="admin.html">Dashboard</a>
+          <a href="#messages">Messages</a>
+          <a href="#projects">Projects</a>
+          <a href="#analytics">Analytics</a>
+          <a href="#settings">Settings</a>
+        </nav>
+
+        <div class="admin-card compact">
+          <p class="mini-label">Portfolio Status</p>
+          <strong>Online</strong>
+          <span>Last updated today</span>
+        </div>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <div>
+            <p class="mini-label">Overview</p>
+            <h1>Admin Dashboard</h1>
+          </div>
+
+          <div class="topbar-actions">
+            <a href="index.html" class="ghost-btn">View Site</a>
+            <button class="primary-btn" type="button">Logout</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="summary-card">
+            <p>Total Visitors</p>
+            <h3>2,480</h3>
+            <span class="positive">+18.4% this month</span>
+          </article>
+
+          <article class="summary-card">
+            <p>Messages</p>
+            <h3>64</h3>
+            <span class="positive">+7 new</span>
+          </article>
+
+          <article class="summary-card">
+            <p>Projects</p>
+            <h3>12</h3>
+            <span class="neutral">5 active</span>
+          </article>
+
+          <article class="summary-card">
+            <p>Response Rate</p>
+            <h3>92%</h3>
+            <span class="positive">Excellent</span>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <div class="panel panel-wide" id="messages">
+            <div class="panel-header">
+              <h2>Recent Messages</h2>
+              <button class="ghost-btn small" type="button">Export</button>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jane Wambui</td>
+                    <td>jane@email.com</td>
+                    <td>Website Inquiry</td>
+                    <td><span class="status status-new">New</span></td>
+                  </tr>
+                  <tr>
+                    <td>Kevin Otieno</td>
+                    <td>kevin@email.com</td>
+                    <td>Project Collaboration</td>
+                    <td><span class="status status-replied">Replied</span></td>
+                  </tr>
+                  <tr>
+                    <td>Mary Atieno</td>
+                    <td>mary@email.com</td>
+                    <td>Freelance Offer</td>
+                    <td><span class="status status-review">Review</span></td>
+                  </tr>
+                  <tr>
+                    <td>John Mwai</td>
+                    <td>john@email.com</td>
+                    <td>IT Support</td>
+                    <td><span class="status status-replied">Replied</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel" id="analytics">
+            <div class="panel-header">
+              <h2>Quick Actions</h2>
+            </div>
+
+            <ul class="action-list">
+              <li><a href="#">Review new inquiries</a></li>
+              <li><a href="#">Update portfolio projects</a></li>
+              <li><a href="#">Post a new achievement</a></li>
+              <li><a href="#">Manage contact links</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="lower-grid">
+          <div class="panel" id="projects">
+            <div class="panel-header">
+              <h2>Project Performance</h2>
+            </div>
+
+            <div class="progress-list">
+              <div class="progress-item">
+                <div class="label-row">
+                  <span>Portfolio Site</span>
+                  <strong>86%</strong>
+                </div>
+                <div class="progress-bar"><span style="width: 86%;"></span></div>
+              </div>
+
+              <div class="progress-item">
+                <div class="label-row">
+                  <span>Graphic Design</span>
+                  <strong>72%</strong>
+                </div>
+                <div class="progress-bar"><span style="width: 72%;"></span></div>
+              </div>
+
+              <div class="progress-item">
+                <div class="label-row">
+                  <span>Networking Setup</span>
+                  <strong>64%</strong>
+                </div>
+                <div class="progress-bar"><span style="width: 64%;"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="settings">
+            <div class="panel-header">
+              <h2>Upcoming Tasks</h2>
+            </div>
+
+            <ul class="task-list">
+              <li>
+                <span class="dot green"></span>
+                Update CV and profile summary
+              </li>
+              <li>
+                <span class="dot orange"></span>
+                Add new project case study
+              </li>
+              <li>
+                <span class="dot blue"></span>
+                Review contact form submissions
+              </li>
+              <li>
+                <span class="dot purple"></span>
+                Refresh social media links
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
