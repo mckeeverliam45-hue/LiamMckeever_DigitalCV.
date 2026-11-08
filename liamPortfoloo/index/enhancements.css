@@ -1,0 +1,77 @@
+/* Portfolio polish: vibrant accents, accessible motion, and a scrolling skill ticker. */
+:root {
+  --portfolio-violet: #7257f5;
+  --portfolio-coral: #ff765f;
+  --portfolio-ink: #13212b;
+}
+
+html { scroll-behavior: smooth; }
+::selection { color: #fff; background: var(--portfolio-violet); }
+:focus-visible { outline: 3px solid var(--portfolio-coral); outline-offset: 4px; }
+
+/* Soft color wash to complement the existing teal theme. */
+.hero {
+  background:
+    radial-gradient(ellipse at 86% 16%, rgba(114, 87, 245, .13), transparent 30%),
+    radial-gradient(ellipse at 8% 85%, rgba(255, 118, 95, .10), transparent 28%),
+    linear-gradient(135deg, #f8faf8, #edf5f2 54%, #f7f5ff);
+}
+.hero h1 span {
+  background: linear-gradient(105deg, var(--accent), var(--portfolio-violet) 72%, var(--portfolio-coral));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.btn-primary, .contact-btn {
+  background: linear-gradient(110deg, var(--accent), var(--portfolio-violet));
+  box-shadow: 0 12px 26px rgba(89, 80, 196, .2);
+}
+.btn-primary:hover, .contact-btn:hover { background: linear-gradient(110deg, var(--accent-dark), #5940d5); }
+.card, .skill-box, .project-card, .personal-details, .contact-info, .contact-form-container, .timeline-content {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+.card:hover, .skill-box:hover, .project-card:hover {
+  border-color: rgba(114, 87, 245, .25);
+}
+
+.portfolio-ticker {
+  overflow: hidden;
+  padding: 15px 0;
+  color: #fff;
+  background: linear-gradient(100deg, #13212b, #214b50 58%, #5141a5);
+}
+.portfolio-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: portfolio-marquee 32s linear infinite;
+}
+.portfolio-ticker:hover .portfolio-ticker__track { animation-play-state: paused; }
+.portfolio-ticker__group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 30px;
+  padding-right: 30px;
+  white-space: nowrap;
+}
+.portfolio-ticker__item { font-size: .83rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.portfolio-ticker__dot { color: #ff9a83; font-size: 1.15rem; }
+@keyframes portfolio-marquee { to { transform: translateX(-50%); } }
+
+.js-reveal { opacity: 0; transform: translateY(18px); transition: opacity 650ms ease, transform 650ms ease; }
+.js-reveal.is-visible { opacity: 1; transform: translateY(0); }
+#formStatus[data-state="success"] { color: #087a51; }
+#formStatus[data-state="error"] { color: #b42318; }
+.contact-btn:disabled { cursor: wait; opacity: .7; transform: none; }
+.portfolio-footer { padding: 24px 16px; color: #dce8e7; background: #13212b; text-align: center; font-size: .88rem; }
+.portfolio-footer p { margin: 0; }
+
+@media (max-width: 640px) {
+  .portfolio-ticker { padding: 12px 0; }
+  .portfolio-ticker__item { font-size: .72rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  .js-reveal { opacity: 1; transform: none; }
+}
